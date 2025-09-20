@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Stevan Moises - Desenvolvedor Front-end | HTML, CSS, JavaScript</title>
+
+    <link rel="stylesheet" href="./src/css/estilos.css">
+
+    <meta name="description" content="Desenvolvedor front-end especializado em criar sites modernos e funcionais. Portfólio com projetos em HTML5, CSS3 e JavaScript. Transformo ideias em experiências digitais incríveis.">
+    <meta name="keywords" content="desenvolvedor front-end, HTML, CSS, JavaScript, sites responsivos, landing pages, portfólio web, desenvolvimento web">
+    <meta name="author" content="Stevan Moises">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://stevanmoises.github.io/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stevanmoises.github.io/">
+    <meta property="og:title" content="Stevan Moises - Desenvolvedor Front-end">
+    <meta property="og:description"
+        content="Desenvolvedor front-end especializado em criar sites modernos e funcionais. Veja meu portfólio com projetos em HTML5, CSS3 e JavaScript.">
+    <meta property="og:image" content="https://stevanmoises.github.io/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stevanmoises.github.io/">
+    <meta property="twitter:title" content="Stevan Moises - Desenvolvedor Front-end">
+    <meta property="twitter:description"
+        content="Desenvolvedor front-end especializado em criar sites modernos e funcionais. Veja meu portfólio com projetos em HTML5, CSS3 e JavaScript.">
+    <meta property="twitter:image" content="https://stevanmoises.github.io/assets/twitter-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Stevan Moises",
+        "jobTitle": "Desenvolvedor Front-end",
+        "description": "Desenvolvedor front-end especializado em HTML, CSS e JavaScript",
+        "url": "https://stevanmoises.github.io/",
+        "sameAs": [
+            "https://linkedin.com/in/stevanmoises",
+            "https://github.com/stevanmoises",
+            "https://instagram.com/stevanmoises"
+        ],
+        "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Desenvolvimento Web", "Sites Responsivos"],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelancer"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor-personalizado"></div>
+
+    <!-- Cabeçalho fixo com navegação -->
+    <header class="cabecalho">
+        <div class="container-cabecalho">
+            <a href="#home" class="logo">Stevan Moises</a>
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-hamburger" id="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <nav class="navegacao-mobile" id="navegacao-mobile">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Hero -->
+    <main>
+        <section id="home" class="secao-hero">
+            <div class="container">
+                <div class="conteudo-hero">
+                    <h1>
+                        <span class="nome-principal">Olá, sou Stevan Moises</span>
+                        <span class="titulo-animado" id="titulo-animado"></span>
+                    </h1>
+                    <p class="cargo">Transformo ideias em experiências digitais incríveis ✨</p>
+                    <div class="links-sociais-hero">
+                        <a href="https://linkedin.com/in/stevanmoises" class="link-social-hero linkedin"
+                            aria-label="LinkedIn" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/stevanmoises" class="link-social-hero github" aria-label="GitHub"
+                            target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/stevanmoises" class="link-social-hero instagram"
+                            aria-label="Instagram" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="#projetos" class="botao-cta">Ver Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao elemento-animado">Sobre Mim</h2>
+                <div class="conteudo-sobre elemento-animado">
+                    <div class="foto-perfil">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20,18C20.5,18 21,17.5 21,17V7C21,6.5 20.5,6 20,6H4C3.5,6 3,6.5 3,7V17C3,17.5 3.5,18 4,18H8V19H7V21H17V19H16V18H20M5,8H19V16H5V8M7,9V10H9V9H7M7,11V12H12V11H7M7,13V14H15V13H7Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="texto-sobre">
+                            🚀 Sou o desenvolvedor que vai fazer seu projeto decolar! Especialista em criar sites que
+                            não apenas funcionam perfeitamente, mas que fazem seus usuários ficarem impressionados.
+                            <br><br>
+                            💡 Minha missão? Transformar sua visão em realidade digital usando apenas <span
+                                class="tech-destaque">HTML</span>, <span class="tech-destaque">CSS</span> e <span
+                                class="tech-destaque">JavaScript</span> puro - sem complicações, só resultados que
+                            convertem visitantes em clientes.
+                            <br><br>
+                            ⚡ Código limpo, performance otimizada e designs que vendem. É assim que trabalho!
+                        </p>
+                        <div class="lista-skills">
+                            <span class="skill-chip html" title="HTML5">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                                </svg>
+                            </span>
+                            <span class="skill-chip css" title="CSS3">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                                </svg>
+                            </span>
+                            <span class="skill-chip js" title="JavaScript">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao elemento-animado">Meus Projetos</h2>
+                <div class="grade-projetos">
+                    <!-- Projeto 1 - HTML, CSS e JavaScript -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/calculadora-interativa" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Calculadora Interativa</h3>
+                            <p class="descricao-projeto">
+                                Calculadora moderna com interface intuitiva, histórico de operações
+                                e animações suaves para cada interação.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                                <span class="tag-tecnologia js">JavaScript</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="calculadora">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 - HTML, CSS e JavaScript -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/gerador-senhas" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Gerador de Senhas</h3>
+                            <p class="descricao-projeto">
+                                Ferramenta para criar senhas seguras com opções personalizáveis,
+                                medidor de força e função de copiar com um clique.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                                <span class="tag-tecnologia js">JavaScript</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="senhas">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 - HTML, CSS e JavaScript -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/quiz-interativo" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,10.27 15.45,11.4 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Quiz Interativo</h3>
+                            <p class="descricao-projeto">
+                                Jogo de perguntas e respostas com cronômetro, sistema de pontuação
+                                e feedback visual para cada resposta.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                                <span class="tag-tecnologia js">JavaScript</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="quiz">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 - HTML e CSS -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/landing-page-produto" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M2.81,14.12L5.64,11.29L8.17,10.79C11.39,6.41 17.55,4.22 19.78,4.22C19.78,6.45 17.59,12.61 13.21,15.83L12.71,18.36L9.88,21.19C9.29,21.78 8.28,21.78 7.69,21.19L2.81,16.31C2.22,15.72 2.22,14.71 2.81,14.12M7.68,7.68C6.1,9.26 6.1,11.74 7.68,13.32C9.26,14.9 11.74,14.9 13.32,13.32C14.9,11.74 14.9,9.26 13.32,7.68C11.74,6.1 9.26,6.1 7.68,7.68Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Landing Page Produto</h3>
+                            <p class="descricao-projeto">
+                                Página de vendas elegante e responsiva com animações CSS puras,
+                                gradientes modernos e layout otimizado para conversão.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="landing">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 5 - HTML e CSS -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/portfolio-fotografo" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Portfólio Fotógrafo</h3>
+                            <p class="descricao-projeto">
+                                Site elegante para fotógrafo com galeria em grid, efeitos hover
+                                sofisticados e design minimalista focado nas imagens.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="portfolio">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 6 - HTML e CSS -->
+                    <article class="cartao-projeto elemento-animado">
+                        <a href="https://stevanmoises.github.io/site-restaurante" target="_blank"
+                            class="preview-projeto-link" title="Clique para ver o projeto">
+                            <div class="preview-projeto">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53C16.28,12.92 16.28,15.18 14.88,16.57C13.49,17.96 11.23,17.96 9.84,16.57L7.76,14.5L10.59,11.67L14.88,11.53M21.04,2.96L19.63,1.54L18.22,2.96L16.81,1.54L15.39,2.96L16.81,4.37L15.39,5.79L16.81,7.2L18.22,5.79L19.63,7.2L21.04,5.79L19.63,4.37L21.04,2.96M15.27,9.85L11.17,9.99L8.46,12.7L10.54,14.77C11.33,15.56 12.61,15.56 13.4,14.77C14.19,13.98 14.19,12.7 13.4,11.91L15.27,9.85Z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="conteudo-projeto">
+                            <h3 class="titulo-projeto">Site Restaurante</h3>
+                            <p class="descricao-projeto">
+                                Website completo para restaurante com menu interativo,
+                                seções bem estruturadas e design que desperta o apetite.
+                            </p>
+                            <div class="tecnologias">
+                                <span class="tag-tecnologia html">HTML5</span>
+                                <span class="tag-tecnologia css">CSS3</span>
+                            </div>
+                            <div class="acoes-projeto">
+                                <button class="botao-secundario botao-detalhes" data-projeto="restaurante">Ver
+                                    Detalhes</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao elemento-animado">Entre em Contato</h2>
+                <form class="formulario-contato elemento-animado" id="formulario-contato">
+                    <div class="grupo-campo">
+                        <label for="nome" class="rotulo-campo">Nome *</label>
+                        <input type="text" id="nome" name="nome" class="campo-entrada" required>
+                        <div class="mensagem-validacao" id="erro-nome">Por favor, insira seu nome</div>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email" class="rotulo-campo">E-mail *</label>
+                        <input type="email" id="email" name="email" class="campo-entrada" required>
+                        <div class="mensagem-validacao" id="erro-email">Por favor, insira um e-mail válido</div>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="whatsapp" class="rotulo-campo">WhatsApp *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="campo-entrada" required
+                            placeholder="(11) 99999-9999" maxlength="15">
+                        <div class="mensagem-validacao" id="erro-whatsapp">Por favor, insira um número de WhatsApp
+                            válido</div>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="mensagem" class="rotulo-campo">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" class="campo-textarea" required
+                            placeholder="Descreva seu projeto ou dúvida..."></textarea>
+                        <div class="mensagem-validacao" id="erro-mensagem">Por favor, escreva uma mensagem</div>
+                    </div>
+
+                    <button type="submit" class="botao-enviar" id="botao-enviar">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Detalhes do Projeto -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-conteudo" id="modal-conteudo">
+            <button class="modal-fechar" id="modal-fechar">&times;</button>
+            <div class="modal-imagem">
+                <div class="projeto-imagem" id="projeto-imagem"></div>
+            </div>
+            <div class="modal-info">
+                <h3 class="modal-titulo" id="modal-titulo"></h3>
+                <p class="modal-descricao" id="modal-descricao"></p>
+                <div class="modal-tecnologias" id="modal-tecnologias"></div>
+                <div class="modal-acoes">
+                    <a href="#" class="botao-modal" id="botao-codigo" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Ver Código
+                    </a>
+                    <a href="#" class="botao-modal botao-primario" id="botao-projeto" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path
+                                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                        </svg>
+                        Ver Projeto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal-confirmacao" id="modal-confirmacao">
+        <div class="modal-confirmacao-conteudo">
+            <button class="modal-confirmacao-fechar" id="modal-confirmacao-fechar">&times;</button>
+            <div class="modal-confirmacao-icone">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+            </div>
+            <h3 class="modal-confirmacao-titulo">Mensagem Enviada!</h3>
+            <p class="modal-confirmacao-texto">
+                Sua mensagem foi enviada com sucesso! Entrarei em contato o mais breve possível através do seu e-mail ou
+                WhatsApp.
+            </p>
+            <button class="modal-confirmacao-botao" id="modal-confirmacao-ok">
+                Perfeito!
+            </button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="links-sociais">
+                <a href="https://linkedin.com/in/stevanmoises" class="link-social linkedin" aria-label="LinkedIn"
+                    target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/stevanmoises" class="link-social github" aria-label="GitHub"
+                    target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://instagram.com/stevanmoises" class="link-social instagram" aria-label="Instagram"
+                    target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright">
+                © 2024 Stevan Moises. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
