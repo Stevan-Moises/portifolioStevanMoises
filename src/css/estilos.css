@@ -12,7 +12,7 @@
     --cor-texto-primario: #ffffff;
     --cor-texto-secundario: #cccccc;
     --cor-destaque: #ff3333;
-    --cor-destaque-hover: #ff5555;
+    --cor-destaque-hover: #ff1111;
     --cor-neutro: #666666;
 
     /* Cores para gradientes */
@@ -180,7 +180,7 @@ body {
 }
 
 .navegacao a:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-destaque-hover);
 }
 
 .navegacao a::after {
@@ -190,7 +190,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-hover);
     transition: var(--transicao-suave);
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .navegacao-mobile a:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-destaque-hover);
     background-color: rgba(255, 51, 51, 0.1);
     transform: translateX(10px);
 }
@@ -285,7 +285,7 @@ body {
     top: 50%;
     width: 0;
     height: 2px;
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-hover);
     transition: width 0.3s ease;
     transform: translateY(-50%);
 }
@@ -565,7 +565,7 @@ body {
 
 .cartao-projeto:hover {
     transform: translateY(-10px);
-    border-color: var(--cor-destaque);
+    border-color: var(--cor-destaque-hover);
     box-shadow: var(--sombra-cartao);
 }
 
@@ -718,7 +718,7 @@ body {
 }
 
 .botao-secundario:hover {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-hover);
     color: var(--cor-texto-primario);
     transform: translateY(-3px);
     box-shadow: var(--sombra-destaque-pequena);
@@ -1073,7 +1073,7 @@ body {
 }
 
 .modal-confirmacao-fechar:hover {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-hover);
     color: var(--cor-texto-primario);
     transform: rotate(90deg);
 }
@@ -1188,7 +1188,7 @@ body {
 }
 
 .modal-fechar:hover {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-hover);
     color: var(--cor-texto-primario);
     transform: rotate(90deg);
 }
