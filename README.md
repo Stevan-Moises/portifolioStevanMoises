@@ -1,4 +1,3 @@
-````markdown
 # 🚀 Portfólio Pessoal | Stevan Moises
 
 > Um portfólio moderno desenvolvido com HTML, CSS e JavaScript, focado em performance, animações fluidas e uma experiência de usuário premium.
@@ -88,21 +87,10 @@ Compatível com smartphones, tablets e desktops.
 ## 📬 Contato
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/stevan-moises/" target="_blank">
-    <img src="https://cdn.simpleicons.org/linkedin" alt="LinkedIn" width="42" />
-  </a>
-
-  <a href="https://www.instagram.com/stevan_moises/" target="_blank">
-    <img src="https://cdn.simpleicons.org/instagram" alt="Instagram" width="42" />
-  </a>
-
-  <a href="mailto:stevanmoises67@gmail.com">
-    <img src="https://cdn.simpleicons.org/gmail" alt="E-mail" width="42" />
-  </a>
-
-  <a href="#" target="_blank">
-    <img src="https://cdn.simpleicons.org/googlechrome" alt="Portfólio" width="42" />
-  </a>
+  <a href="https://www.linkedin.com/in/stevan-moises/">💼 LinkedIn</a> •
+  <a href="https://www.instagram.com/stevan_moises/">📸 Instagram</a> •
+  <a href="mailto:stevanmoises67@gmail.com">📧 E-mail</a> •
+  <a href="#">🌐 Portfólio</a>
 </p>
 
 ---
@@ -116,4 +104,3 @@ Este projeto está licenciado sob a licença MIT.
 <p align="center">
 Desenvolvido com muito ☕ por <strong>Stevan Moises</strong>
 </p>
-````
