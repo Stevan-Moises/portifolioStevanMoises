@@ -29,7 +29,6 @@
     --transicao-rapida: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transicao-suave: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transicao-lenta: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    /* Transição de magnetismo ajustada para amortecer a entrada e manter fluidez */
     --transicao-magnetismo: 0.2s cubic-bezier(0.03, 0.98, 0.52, 0.99);
     --transicao-modal: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
@@ -40,17 +39,13 @@
     --cursor-anel-tamanho-padrao: 35px;
     --cursor-anel-tamanho-hover: 65px;
 
-    /* --- MODAL --- */
+    /* --- MODAL E COMPONENTES --- */
     --fundo-overlay: rgba(0, 0, 0, 0.9);
     --z-index-modal: 1000;
-
-    /* --- DIMENSIONAMENTO E RAIO --- */
     --largura-scrollbar: 8px;
     --raio-grande: 1.5rem;
-    --raio-extra-grande: 2.5rem;
 }
 
-/* Configurações Gerais */
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
@@ -62,7 +57,6 @@ body {
     font-family: var(--fonte-codigo);
 }
 
-/* Customização da Scrollbar */
 ::-webkit-scrollbar {
     width: var(--largura-scrollbar);
 }
@@ -81,12 +75,10 @@ body {
     background: var(--cor-secundaria);
 }
 
-/* Oculta o cursor padrão */
 * {
     cursor: none !important;
 }
 
-/* Fundo Animado */
 #canvas-bg {
     position: fixed;
     top: 0;
@@ -97,7 +89,6 @@ body {
     opacity: 0.3;
 }
 
-/* Cursor Dinâmico */
 #cursor-ponto {
     width: 6px;
     height: 6px;
@@ -120,7 +111,6 @@ body {
     transition: width var(--transicao-suave), height var(--transicao-suave), border-color var(--transicao-suave), background var(--transicao-suave), transform 0.15s ease-out;
 }
 
-/* Glassmorphism e Brilho Hover */
 .efeito-vidro {
     background: var(--fundo-vidro);
     backdrop-filter: blur(12px);
@@ -134,14 +124,12 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Botão WhatsApp Específico */
 .btn-whatsapp-brilho:hover {
     border-color: var(--cor-whatsapp);
     box-shadow: 0 0 var(--intensidade-brilho) var(--brilho-whatsapp), inset 0 0 15px var(--brilho-whatsapp);
     background: rgba(37, 211, 102, 0.05);
 }
 
-/* Navegação */
 .item-navegacao {
     position: relative;
     padding: 0.5rem 0;
@@ -164,7 +152,6 @@ body {
     width: 100%;
 }
 
-/* Animações de Entrada */
 .revelar-texto {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transform: translateY(100%);
@@ -188,7 +175,6 @@ body {
     filter: blur(0);
 }
 
-/* Estilização dos Inputs do Formulário */
 .input-contato {
     background: var(--fundo-input) !important;
     border: 1px solid var(--cor-borda);
@@ -203,7 +189,6 @@ body {
     outline: none;
 }
 
-/* Seção Sobre e Foto */
 .moldura-foto {
     position: relative;
     width: 280px;
@@ -246,7 +231,6 @@ body {
     border-color: var(--cor-primaria);
 }
 
-/* Cards de Projeto Dinâmicos */
 .projeto-container {
     perspective: 1000px;
 }
@@ -254,7 +238,6 @@ body {
 .card-projeto-movel {
     transform-style: preserve-3d;
     will-change: transform;
-    /* Utiliza a transição de magnetismo para suavizar a entrada */
     transition: transform var(--transicao-magnetismo), background var(--transicao-magnetismo), border-color var(--transicao-suave), box-shadow var(--transicao-suave);
 }
 
@@ -264,13 +247,11 @@ body {
     transition: all var(--transicao-suave);
 }
 
-/* Hover no Desktop */
 .card-projeto-movel:hover .btn-detalhes {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Adaptação para Touch: Botão visível por padrão */
 @media (pointer: coarse) {
     .btn-detalhes {
         opacity: 1;
@@ -278,7 +259,6 @@ body {
     }
 }
 
-/* MODAL */
 #modal-projeto {
     position: fixed;
     inset: 0;
@@ -322,7 +302,6 @@ body {
     transform: scale(1) translateY(0);
 }
 
-/* Ícones Sociais */
 .icone-social {
     font-size: 1.5rem;
     transition: all var(--transicao-rapida);

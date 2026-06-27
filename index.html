@@ -13,7 +13,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="shortcut icon" href="./src/img/logo-portifolio.png" type="image/x-icon">
 </head>
 
 <body class="selection:bg-indigo-500/30">
@@ -44,7 +46,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="inicio" class="min-h-screen flex flex-col justify-center px-6">
             <div class="container mx-auto">
                 <div class="overflow-hidden mb-4">
@@ -79,7 +80,6 @@
             </div>
         </section>
 
-        <!-- Projetos -->
         <section id="projetos" class="py-32 px-6 overflow-visible animar-entrada">
             <div class="container mx-auto">
                 <div class="mb-24">
@@ -88,7 +88,6 @@
                 </div>
 
                 <div class="relative flex flex-col lg:flex-row gap-12 lg:gap-8 items-start lg:min-h-[800px]">
-
                     <div class="projeto-container w-full lg:w-1/3 animar-entrada">
                         <article class="card-projeto-movel efeito-vidro hover-brilho rounded-3xl overflow-hidden p-6"
                             data-titulo="E-commerce Premium"
@@ -107,9 +106,8 @@
                                 <p class="text-gray-400 text-sm mb-6 font-light italic">Interfaces focadas em conversão
                                     para marcas de alto padrão.</p>
                                 <button
-                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-indigo-500/30 rounded-xl hover:bg-indigo-500 transition-all">
-                                    Ver Detalhes
-                                </button>
+                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-indigo-500/30 rounded-xl hover:bg-indigo-500 transition-all">Ver
+                                    Detalhes</button>
                             </div>
                         </article>
                     </div>
@@ -133,9 +131,8 @@
                                 <p class="text-gray-400 text-sm mb-6 font-light italic">Análise complexa traduzida em
                                     visualização simples e rápida.</p>
                                 <button
-                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-purple-500/30 rounded-xl hover:bg-purple-500 transition-all">
-                                    Ver Detalhes
-                                </button>
+                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-purple-500/30 rounded-xl hover:bg-purple-500 transition-all">Ver
+                                    Detalhes</button>
                             </div>
                         </article>
                     </div>
@@ -159,9 +156,8 @@
                                 <p class="text-gray-400 text-sm mb-6 font-light italic">Captura de leads através de
                                     design imersivo e elegante.</p>
                                 <button
-                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-blue-500/30 rounded-xl hover:bg-blue-500 transition-all">
-                                    Ver Detalhes
-                                </button>
+                                    class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-blue-500/30 rounded-xl hover:bg-blue-500 transition-all">Ver
+                                    Detalhes</button>
                             </div>
                         </article>
                     </div>
@@ -169,7 +165,6 @@
             </div>
         </section>
 
-        <!-- Sobre -->
         <section id="sobre" class="py-32 px-6 bg-white/[0.01] animar-entrada">
             <div class="container mx-auto">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -211,43 +206,67 @@
             </div>
         </section>
 
-        <!-- Contato -->
         <section id="contato" class="py-32 px-6 animar-entrada">
             <div class="container mx-auto">
-                <div class="max-w-4xl mx-auto efeito-vidro rounded-[40px] p-8 md:p-16 hover-brilho">
+                <div
+                    class="max-w-4xl mx-auto efeito-vidro rounded-[40px] p-8 md:p-16 hover-brilho relative overflow-hidden">
+
+                    <!-- Overlay de Sucesso -->
+                    <div id="overlay-sucesso"
+                        class="absolute inset-0 bg-black/95 backdrop-blur-xl z-20 flex flex-col items-center justify-center text-center p-8 md:p-12 opacity-0 pointer-events-none transition-all duration-700">
+                        <div
+                            class="w-20 h-20 bg-indigo-500/10 rounded-full flex items-center justify-center mb-6 border border-indigo-500/20 shadow-[0_0_30px_rgba(99,102,241,0.2)]">
+                            <i class="fa-solid fa-paper-plane text-4xl text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">Mensagem Enviada!</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-md mx-auto">
+                            Agradeço pelo seu interesse. Sua mensagem já está na minha caixa de entrada. Farei uma
+                            análise inicial e retornarei em até <strong class="text-indigo-400 font-bold">24
+                                horas</strong> para darmos o próximo passo.
+                        </p>
+                        <button id="btn-voltar-form"
+                            class="px-8 py-4 text-xs font-bold uppercase tracking-widest border border-white/20 hover:border-indigo-500 hover:bg-indigo-500/10 text-white transition-all rounded-xl">
+                            Enviar nova mensagem
+                        </button>
+                    </div>
+
                     <div class="text-center mb-16">
                         <h2 class="text-xs uppercase tracking-[0.4em] text-indigo-500 font-bold mb-4">03. Contato</h2>
                         <h3 class="text-4xl md:text-5xl font-bold">Vamos dar o próximo passo?</h3>
                     </div>
 
-                    <form class="grid md:grid-cols-2 gap-6" onsubmit="event.preventDefault()">
+                    <form id="form-contato" class="grid md:grid-cols-2 gap-6">
                         <div class="flex flex-col gap-2">
                             <label class="text-xs uppercase font-bold tracking-widest text-gray-500 px-1">Nome</label>
-                            <input type="text" placeholder="Como deseja ser chamado?"
+                            <input type="text" name="nome" required placeholder="Como deseja ser chamado?"
                                 class="input-contato p-4 rounded-xl">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-xs uppercase font-bold tracking-widest text-gray-500 px-1">E-mail</label>
-                            <input type="email" placeholder="seu@email.com" class="input-contato p-4 rounded-xl">
+                            <!-- O name="email" é obrigatório para o Formspree saber para onde responder -->
+                            <input type="email" name="email" required placeholder="seu@email.com"
+                                class="input-contato p-4 rounded-xl">
                         </div>
                         <div class="flex flex-col gap-2 md:col-span-2">
                             <label
                                 class="text-xs uppercase font-bold tracking-widest text-gray-500 px-1">Assunto</label>
-                            <select class="input-contato p-4 rounded-xl">
-                                <option>Novo Projeto / Freelance</option>
-                                <option>Oportunidade Profissional</option>
-                                <option>Outros Assuntos</option>
+                            <select name="assunto" required class="input-contato p-4 rounded-xl">
+                                <option value="Novo Projeto / Freelance">Novo Projeto / Freelance</option>
+                                <option value="Oportunidade Profissional">Oportunidade Profissional</option>
+                                <option value="Outros Assuntos">Outros Assuntos</option>
                             </select>
                         </div>
                         <div class="flex flex-col gap-2 md:col-span-2">
                             <label
                                 class="text-xs uppercase font-bold tracking-widest text-gray-500 px-1">Mensagem</label>
-                            <textarea rows="4" placeholder="Conte-me sobre o seu desafio digital..."
+                            <textarea name="mensagem" required rows="4"
+                                placeholder="Conte-me sobre o seu desafio digital..."
                                 class="input-contato p-4 rounded-xl"></textarea>
                         </div>
-                        <button type="submit"
-                            class="md:col-span-2 py-5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-[0_0_30px_rgba(99,102,241,0.5)]">
-                            Enviar Mensagem
+                        <button id="btn-enviar" type="submit"
+                            class="md:col-span-2 py-5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] flex justify-center items-center gap-3">
+                            <span id="texto-btn-enviar">Enviar Mensagem</span>
+                            <i id="spinner-btn-enviar" class="fa-solid fa-circle-notch fa-spin hidden"></i>
                         </button>
                     </form>
 
@@ -255,7 +274,8 @@
                     <div class="mt-12 pt-8 border-t border-white/5 text-center">
                         <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em] mb-6">Ou se preferir um contato
                             direto</p>
-                        <a href="https://wa.me/+5582981744522" target="_blank"
+                        <a href="https://wa.me/5582981744522?text=Ol%C3%A1%20Stevan!%20Acessei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto."
+                            target="_blank"
                             class="btn-whatsapp-brilho group inline-flex items-center gap-4 px-8 py-4 efeito-vidro rounded-2xl transition-all">
                             <i
                                 class="fa-brands fa-whatsapp text-2xl text-gray-400 group-hover:text-[--cor-whatsapp] transition-colors"></i>
@@ -269,7 +289,6 @@
         </section>
     </main>
 
-    <!-- Modal de Detalhes -->
     <div id="modal-projeto">
         <div class="modal-overlay" onclick="fecharModal()"></div>
         <div class="modal-conteudo">
@@ -282,8 +301,7 @@
                 <h4 id="modal-titulo" class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tighter">Título do
                     Projeto</h4>
                 <div class="w-20 h-1 bg-indigo-500 mb-8 rounded-full shadow-[0_0_15px_var(--brilho-primario)]"></div>
-                <p id="modal-descricao" class="text-gray-400 text-lg leading-relaxed mb-10">
-                    Descrição completa aqui...
+                <p id="modal-descricao" class="text-gray-400 text-lg leading-relaxed mb-10">Descrição completa aqui...
                 </p>
             </div>
 
@@ -302,7 +320,6 @@
         </div>
     </div>
 
-    <!-- Rodapé modificado com a assinatura do café -->
     <footer class="py-20 border-t border-white/5 bg-black animar-entrada">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-12">
@@ -315,15 +332,12 @@
                 </div>
 
                 <nav class="flex justify-center gap-8 items-center" aria-label="Redes Sociais">
-                    <a href="https://www.linkedin.com/in/stevan-moises/" class="icone-social icone-social-linkedin" title="LinkedIn" target="_blank">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/Stevan-Moises" class="icone-social icone-social-github" title="GitHub" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/stevan_moises/" class="icone-social icone-social-instagram" title="Instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/stevan-moises/" class="icone-social icone-social-linkedin"
+                        title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Stevan-Moises" class="icone-social icone-social-github" title="GitHub"
+                        target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/stevan_moises/" class="icone-social icone-social-instagram"
+                        title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </nav>
 
                 <div class="text-[10px] text-gray-700 font-mono tracking-widest">
