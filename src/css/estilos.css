@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+    /* --- PALETA DE CORES --- */
+    --cor-fundo: #050505;
+    --cor-primaria: #6366f1;
+    /* Indigo */
+    --cor-secundaria: #a855f7;
+    /* Roxo */
+    --cor-whatsapp: #25d366;
+    /* Verde WhatsApp */
+    --cor-texto: #fafafa;
+    --cor-texto-suave: #666666;
+    --cor-borda: rgba(255, 255, 255, 0.08);
+
+    /* --- EFEITOS DE BRILHO (GLOW) --- */
+    --brilho-primario: rgba(99, 102, 241, 0.4);
+    --brilho-secundario: rgba(168, 85, 247, 0.4);
+    --brilho-whatsapp: rgba(37, 211, 102, 0.4);
+    --intensidade-brilho: 20px;
+    --fundo-vidro: rgba(255, 255, 255, 0.02);
+    --fundo-input: #0a0a0a;
+
+    /* --- TIPOGRAFIA --- */
+    --fonte-principal: 'Plus Jakarta Sans', sans-serif;
+    --fonte-codigo: 'Fira Code', monospace;
+
+    /* --- TRANSIÇÕES E ANIMAÇÕES --- */
+    --transicao-rapida: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transicao-suave: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transicao-lenta: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Transição de magnetismo ajustada para amortecer a entrada e manter fluidez */
+    --transicao-magnetismo: 0.2s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+    --transicao-modal: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* --- CURSOR CUSTOMIZADO --- */
+    --cursor-ponto-fundo: var(--cor-primaria);
+    --cursor-anel-borda: rgba(99, 102, 241, 0.3);
+    --cursor-anel-espessura: 1px;
+    --cursor-anel-tamanho-padrao: 35px;
+    --cursor-anel-tamanho-hover: 65px;
+
+    /* --- MODAL --- */
+    --fundo-overlay: rgba(0, 0, 0, 0.9);
+    --z-index-modal: 1000;
+
+    /* --- DIMENSIONAMENTO E RAIO --- */
+    --largura-scrollbar: 8px;
+    --raio-grande: 1.5rem;
+    --raio-extra-grande: 2.5rem;
+}
+
+/* Configurações Gerais */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+
+.fonte-codigo {
+    font-family: var(--fonte-codigo);
+}
+
+/* Customização da Scrollbar */
+::-webkit-scrollbar {
+    width: var(--largura-scrollbar);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 10px;
+    transition: background var(--transicao-rapida);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria);
+}
+
+/* Oculta o cursor padrão */
+* {
+    cursor: none !important;
+}
+
+/* Fundo Animado */
+#canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Cursor Dinâmico */
+#cursor-ponto {
+    width: 6px;
+    height: 6px;
+    background: var(--cursor-ponto-fundo);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10001;
+    transition: transform 0.1s ease;
+}
+
+#cursor-anel {
+    width: var(--cursor-anel-tamanho-padrao);
+    height: var(--cursor-anel-tamanho-padrao);
+    border: var(--cursor-anel-espessura) solid var(--cursor-anel-borda);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transition: width var(--transicao-suave), height var(--transicao-suave), border-color var(--transicao-suave), background var(--transicao-suave), transform 0.15s ease-out;
+}
+
+/* Glassmorphism e Brilho Hover */
+.efeito-vidro {
+    background: var(--fundo-vidro);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--cor-borda);
+    transition: all var(--transicao-suave);
+}
+
+.hover-brilho:hover {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 var(--intensidade-brilho) var(--brilho-primario), inset 0 0 15px var(--brilho-primario);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Botão WhatsApp Específico */
+.btn-whatsapp-brilho:hover {
+    border-color: var(--cor-whatsapp);
+    box-shadow: 0 0 var(--intensidade-brilho) var(--brilho-whatsapp), inset 0 0 15px var(--brilho-whatsapp);
+    background: rgba(37, 211, 102, 0.05);
+}
+
+/* Navegação */
+.item-navegacao {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.item-navegacao::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--cor-primaria);
+    box-shadow: 0 0 12px var(--cor-primaria);
+    transition: all var(--transicao-suave);
+    transform: translateX(-50%);
+}
+
+.item-navegacao:hover::after {
+    width: 100%;
+}
+
+/* Animações de Entrada */
+.revelar-texto {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+    transition: transform var(--transicao-lenta);
+}
+
+.visivel .revelar-texto {
+    transform: translateY(0);
+}
+
+.animar-entrada {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+    transition: opacity 1s ease, transform var(--transicao-lenta), filter 0.8s ease;
+}
+
+.animar-entrada.visivel {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Estilização dos Inputs do Formulário */
+.input-contato {
+    background: var(--fundo-input) !important;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+    transition: all var(--transicao-suave);
+}
+
+.input-contato:focus {
+    border-color: var(--cor-primaria);
+    background: #0f0f0f !important;
+    box-shadow: 0 0 15px var(--brilho-primario);
+    outline: none;
+}
+
+/* Seção Sobre e Foto */
+.moldura-foto {
+    position: relative;
+    width: 280px;
+    height: 350px;
+}
+
+.moldura-foto::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-grande);
+    z-index: 0;
+    transition: all var(--transicao-suave);
+}
+
+.foto-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    border-radius: var(--raio-grande);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid var(--cor-borda);
+    transition: border-color var(--transicao-suave);
+}
+
+.moldura-foto:hover::before {
+    top: 10px;
+    left: 10px;
+    border-color: var(--cor-secundaria);
+    transform: scale(1.02);
+}
+
+.moldura-foto:hover .foto-wrapper {
+    border-color: var(--cor-primaria);
+}
+
+/* Cards de Projeto Dinâmicos */
+.projeto-container {
+    perspective: 1000px;
+}
+
+.card-projeto-movel {
+    transform-style: preserve-3d;
+    will-change: transform;
+    /* Utiliza a transição de magnetismo para suavizar a entrada */
+    transition: transform var(--transicao-magnetismo), background var(--transicao-magnetismo), border-color var(--transicao-suave), box-shadow var(--transicao-suave);
+}
+
+.btn-detalhes {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transicao-suave);
+}
+
+/* Hover no Desktop */
+.card-projeto-movel:hover .btn-detalhes {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adaptação para Touch: Botão visível por padrão */
+@media (pointer: coarse) {
+    .btn-detalhes {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MODAL */
+#modal-projeto {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-index-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#modal-projeto.aberto {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--fundo-overlay);
+    backdrop-filter: blur(8px);
+}
+
+.modal-conteudo {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #0a0a0a;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+    padding: 3rem;
+    transform: scale(0.9) translateY(20px);
+    transition: transform var(--transicao-modal);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+#modal-projeto.aberto .modal-conteudo {
+    transform: scale(1) translateY(0);
+}
+
+/* Ícones Sociais */
+.icone-social {
+    font-size: 1.5rem;
+    transition: all var(--transicao-rapida);
+    color: var(--cor-texto-suave);
+    display: inline-block;
+}
+
+.icone-social-linkedin:hover {
+    color: #0077b5;
+    filter: drop-shadow(0 0 10px #0077b5);
+}
+
+.icone-social-github:hover {
+    color: #fff;
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.icone-social-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(214, 36, 159, 0.7));
+}
+
+@media (max-width: 768px) {
+    * {
+        cursor: auto !important;
+    }
+
+    #cursor-ponto,
+    #cursor-anel {
+        display: none;
+    }
+
+    .moldura-foto {
+        width: 220px;
+        height: 280px;
+    }
+
+    .modal-conteudo {
+        padding: 1.5rem;
+    }
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
