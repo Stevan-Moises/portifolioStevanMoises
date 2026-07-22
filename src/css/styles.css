@@ -1,3 +1,12 @@
+/* ==========================================================
+   Estilos do portfólio - Stevan Moises
+   O grosso do layout é feito com classes utilitárias do Tailwind
+   direto no HTML. Este arquivo cobre só o que o Tailwind não
+   resolve: variáveis de tema, cursor customizado, animações
+   e componentes específicos (modal, card 3D, glass effect etc).
+   ========================================================== */
+
+/* Fontes usadas no site: Plus Jakarta Sans (textos) e Fira Code (trechos "de código") */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
@@ -46,17 +55,20 @@
     --raio-grande: 1.5rem;
 }
 
+/* Configuração base da página */
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     overflow-x: hidden;
+    /* evita barra de rolagem horizontal causada pelas animações */
 }
 
 .fonte-codigo {
     font-family: var(--fonte-codigo);
 }
 
+/* Barra de rolagem customizada (só funciona em navegadores baseados em Chromium/WebKit) */
 ::-webkit-scrollbar {
     width: var(--largura-scrollbar);
 }
@@ -75,10 +87,12 @@ body {
     background: var(--cor-secundaria);
 }
 
+/* Esconde o cursor nativo do sistema, porque usamos um cursor customizado (ver #cursor-ponto e #cursor-anel) */
 * {
     cursor: none !important;
 }
 
+/* Canvas de partículas no fundo, controlado pelo script.js */
 #canvas-bg {
     position: fixed;
     top: 0;
@@ -89,6 +103,8 @@ body {
     opacity: 0.3;
 }
 
+/* Cursor customizado: um pontinho que segue o mouse na hora
+   e um anel que segue com um leve atraso (efeito no script.js) */
 #cursor-ponto {
     width: 6px;
     height: 6px;
@@ -111,6 +127,7 @@ body {
     transition: width var(--transicao-suave), height var(--transicao-suave), border-color var(--transicao-suave), background var(--transicao-suave), transform 0.15s ease-out;
 }
 
+/* Efeito "vidro fosco" (glassmorphism) usado nos cards e no bloco de contato */
 .efeito-vidro {
     background: var(--fundo-vidro);
     backdrop-filter: blur(12px);
@@ -118,18 +135,21 @@ body {
     transition: all var(--transicao-suave);
 }
 
+/* Brilho ao passar o mouse, usado junto com .efeito-vidro */
 .hover-brilho:hover {
     border-color: var(--cor-primaria);
     box-shadow: 0 0 var(--intensidade-brilho) var(--brilho-primario), inset 0 0 15px var(--brilho-primario);
     background: rgba(255, 255, 255, 0.05);
 }
 
+/* Mesmo brilho, mas na cor do WhatsApp, para o botão de contato direto */
 .btn-whatsapp-brilho:hover {
     border-color: var(--cor-whatsapp);
     box-shadow: 0 0 var(--intensidade-brilho) var(--brilho-whatsapp), inset 0 0 15px var(--brilho-whatsapp);
     background: rgba(37, 211, 102, 0.05);
 }
 
+/* Sublinhado animado nos links do menu (cresce do centro para as bordas) */
 .item-navegacao {
     position: relative;
     padding: 0.5rem 0;
@@ -152,6 +172,9 @@ body {
     width: 100%;
 }
 
+/* Efeito de "cortina subindo" no título e subtítulo do topo.
+   Começa escondido (translateY 100%) e o script.js adiciona a
+   classe .visivel via Intersection Observer quando entra na tela */
 .revelar-texto {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transform: translateY(100%);
@@ -162,6 +185,7 @@ body {
     transform: translateY(0);
 }
 
+/* Fade-in + leve desfoque usado nas seções ao rolar a página (mesma lógica do Intersection Observer) */
 .animar-entrada {
     opacity: 0;
     transform: translateY(40px);
@@ -175,6 +199,7 @@ body {
     filter: blur(0);
 }
 
+/* Campos do formulário de contato */
 .input-contato {
     background: var(--fundo-input) !important;
     border: 1px solid var(--cor-borda);
@@ -189,6 +214,8 @@ body {
     outline: none;
 }
 
+/* Moldura da foto de perfil (seção "Sobre"). O ::before cria o
+   quadrado deslocado atrás da foto, que se move no hover */
 .moldura-foto {
     position: relative;
     width: 280px;
@@ -231,6 +258,7 @@ body {
     border-color: var(--cor-primaria);
 }
 
+/* Cards de projeto com efeito 3D ao mover o mouse (rotação calculada no script.js) */
 .projeto-container {
     perspective: 1000px;
 }
@@ -241,6 +269,7 @@ body {
     transition: transform var(--transicao-magnetismo), background var(--transicao-magnetismo), border-color var(--transicao-suave), box-shadow var(--transicao-suave);
 }
 
+/* Botão "Ver Detalhes" só aparece no hover do card (em telas com mouse) */
 .btn-detalhes {
     opacity: 0;
     transform: translateY(10px);
@@ -252,6 +281,7 @@ body {
     transform: translateY(0);
 }
 
+/* Em telas de toque não tem "hover", então o botão fica sempre visível */
 @media (pointer: coarse) {
     .btn-detalhes {
         opacity: 1;
@@ -259,6 +289,7 @@ body {
     }
 }
 
+/* Modal com os detalhes do projeto (abre/fecha via classe .aberto no script.js) */
 #modal-projeto {
     position: fixed;
     inset: 0;
@@ -302,6 +333,25 @@ body {
     transform: scale(1) translateY(0);
 }
 
+/* Ícones sociais do rodapé, cada rede com sua cor no hover */
+/* Pill usado nas tags de tecnologia da seção de Skills & Stack */
+.tag-skill {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    transition: all var(--transicao-rapida);
+}
+
+.tag-skill:hover {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
 .icone-social {
     font-size: 1.5rem;
     transition: all var(--transicao-rapida);
@@ -327,6 +377,7 @@ body {
     filter: drop-shadow(0 0 15px rgba(214, 36, 159, 0.7));
 }
 
+/* Ajustes para celular: cursor customizado atrapalha em telas de toque, então volta ao padrão */
 @media (max-width: 768px) {
     * {
         cursor: auto !important;
@@ -347,6 +398,7 @@ body {
     }
 }
 
+/* Animação do gradiente de texto no título principal ("ATRAVÉS DO CÓDIGO") */
 @keyframes gradient-bg {
     0% {
         background-position: 0% 50%;
