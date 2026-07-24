@@ -12,7 +12,7 @@
 ## 📷 Preview
 
 <p align="center">
-  <img src="" alt="Preview do Projeto" width="900">
+  <img src="./src/img/preview.png" alt="Preview do Projeto" width="900">
 </p>
 
 
@@ -42,6 +42,9 @@ Animações utilizando a API **Intersection Observer**.
 ### 📨 Formulário assíncrono
 Integração com **Formspree** utilizando **Fetch API**, exibindo feedback visual sem recarregar a página.
 
+### 🧰 Skills & Stack
+Seção dedicada às principais tecnologias, ferramentas e boas práticas do dia a dia.
+
 ### 📱 Responsividade
 Compatível com smartphones, tablets e desktops.
 
@@ -65,10 +68,11 @@ Compatível com smartphones, tablets e desktops.
 ├── index.html
 ├── src/
 │   ├── css/
-│   │   └── estilos.css
+│   │   └── styles.css
 │   ├── js/
 │   │   └── script.js
 │   └── img/
+│       └── projetos/       <- screenshots dos cards de projeto (sst-web.jpg, dp-master.jpg...)
 └── README.md
 ```
 

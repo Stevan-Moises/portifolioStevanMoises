@@ -95,24 +95,24 @@
 
                 <div class="relative flex flex-col lg:flex-row gap-12 lg:gap-8 items-start lg:min-h-[800px]">
                     <!-- Card 1: os atributos data-* alimentam o modal quando clica em "Ver Detalhes" -->
-                    <!-- TODO: trocar data-github e data-site pelos links reais quando os projetos estiverem no ar -->
                     <div class="projeto-container w-full lg:w-1/3 animar-entrada">
                         <article class="card-projeto-movel efeito-vidro hover-brilho rounded-3xl overflow-hidden p-6"
-                            data-titulo="E-commerce Premium"
-                            data-descricao="Uma plataforma completa desenvolvida para marcas de luxo que não aceitam o convencional. Implementei uma jornada de compra fluida, animações de micro-interação e um sistema de checkout ultra-seguro."
-                            data-github="#" data-site="#">
+                            data-titulo="Painel de SST"
+                            data-descricao="Sistema de gestão de Segurança do Trabalho que centraliza o controle de ASOs, alertas de vencimento e cadastro de colaboradores por filial. Construí uma arquitetura local-first com JavaScript modular e Tailwind CSS v4, com importação/exportação em massa via CSV e backup de segurança obrigatório."
+                            data-github="https://github.com/Stevan-Moises/sst-web"
+                            data-site="https://sst-web-zeta.vercel.app">
                             <div class="conteudo-projeto">
-                                <div
-                                    class="h-64 rounded-2xl bg-indigo-500/10 mb-6 flex items-center justify-center relative overflow-hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-indigo-500/50"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                    </svg>
+                                <!-- Imagem do projeto (screenshot). object-cover preenche o quadro sem distorcer;
+                                     troque o src abaixo pela imagem real quando ela estiver pronta -->
+                                <div class="h-64 rounded-2xl mb-6 relative overflow-hidden bg-indigo-500/10 group">
+                                    <img src="./src/img/projetos/sst-web.jpg"
+                                        alt="Captura de tela do projeto Painel de SST"
+                                        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
                                 </div>
-                                <h4 class="text-2xl font-bold mb-2">E-commerce Premium</h4>
-                                <p class="text-gray-400 text-sm mb-6 font-light italic">Interfaces focadas em conversão
-                                    para marcas de alto padrão.</p>
+                                <h4 class="text-2xl font-bold mb-2">Painel de SST</h4>
+                                <p class="text-gray-400 text-sm mb-6 font-light italic">Controle de ASOs e prazos de
+                                    saúde ocupacional, direto no navegador.</p>
                                 <button
                                     class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-indigo-500/30 rounded-xl hover:bg-indigo-500 transition-all">Ver
                                     Detalhes</button>
@@ -124,21 +124,22 @@
                     <div class="projeto-container w-full lg:w-1/3 lg:mt-40 animar-entrada"
                         style="transition-delay: 0.2s;">
                         <article class="card-projeto-movel efeito-vidro hover-brilho rounded-3xl overflow-hidden p-6"
-                            data-titulo="Métricas de Dados"
-                            data-descricao="Transformação de conjuntos de dados complexos em visualizações intuitivas. Utilizei arquiteturas modernas para suportar grandes volumes de informação em tempo real."
-                            data-github="#" data-site="#">
+                            data-titulo="DP Master"
+                            data-descricao="Painel de produtividade para o setor de Departamento Pessoal, com motor de rotinas automáticas que antecipa tarefas antes do vencimento e um gerador de e-mails de cobrança de férias. Construí a interface com React e Tailwind CSS, mantendo os dados 100% no navegador — sem servidor — e com exportação de relatórios prontos para Excel."
+                            data-github="https://github.com/Stevan-Moises/dp-master"
+                            data-site="https://dp-master.vercel.app">
                             <div class="conteudo-projeto">
-                                <div
-                                    class="h-64 rounded-2xl bg-purple-500/10 mb-6 flex items-center justify-center relative overflow-hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-purple-500/50"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2" />
-                                    </svg>
+                                <!-- Imagem do projeto (screenshot). object-cover preenche o quadro sem distorcer;
+                                     troque o src abaixo pela imagem real quando ela estiver pronta -->
+                                <div class="h-64 rounded-2xl mb-6 relative overflow-hidden bg-purple-500/10 group">
+                                    <img src="./src/img/projetos/dp-master.jpg"
+                                        alt="Captura de tela do projeto DP Master"
+                                        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
                                 </div>
-                                <h4 class="text-2xl font-bold mb-2">Métricas de Dados</h4>
-                                <p class="text-gray-400 text-sm mb-6 font-light italic">Análise complexa traduzida em
-                                    visualização simples e rápida.</p>
+                                <h4 class="text-2xl font-bold mb-2">DP Master</h4>
+                                <p class="text-gray-400 text-sm mb-6 font-light italic">Automatiza rotinas, prazos e
+                                    relatórios do Departamento Pessoal.</p>
                                 <button
                                     class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-purple-500/30 rounded-xl hover:bg-purple-500 transition-all">Ver
                                     Detalhes</button>
@@ -150,21 +151,22 @@
                     <div class="projeto-container w-full lg:w-1/3 lg:mt-10 animar-entrada"
                         style="transition-delay: 0.4s;">
                         <article class="card-projeto-movel efeito-vidro hover-brilho rounded-3xl overflow-hidden p-6"
-                            data-titulo="Landing Page Imobiliária"
-                            data-descricao="Uma landing page imersiva focada na conversão de leads qualificados. Apliquei técnicas de animação para garantir uma experiência de alto padrão."
-                            data-github="#" data-site="#">
+                            data-titulo="MinhasFinanças"
+                            data-descricao="Aplicativo de controle financeiro pessoal com um motor de metas que vincula cada real investido ao seu objetivo, fechamento de mês como um talão de cheques e gráficos de evolução com Chart.js. Construí tudo em HTML, CSS e JavaScript puro — sem framework — com acessibilidade, SEO técnico e testes end-to-end automatizados."
+                            data-github="https://github.com/Stevan-Moises/minhas-financas"
+                            data-site="https://minhas-financas-sage.vercel.app">
                             <div class="conteudo-projeto">
-                                <div
-                                    class="h-64 rounded-2xl bg-blue-500/10 mb-6 flex items-center justify-center relative overflow-hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-500/50"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                    </svg>
+                                <!-- Imagem do projeto (screenshot). object-cover preenche o quadro sem distorcer;
+                                     troque o src abaixo pela imagem real quando ela estiver pronta -->
+                                <div class="h-64 rounded-2xl mb-6 relative overflow-hidden bg-blue-500/10 group">
+                                    <img src="./src/img/projetos/minhas-financas.jpg"
+                                        alt="Captura de tela do projeto MinhasFinanças"
+                                        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
                                 </div>
-                                <h4 class="text-2xl font-bold mb-2">Landing Page Imobiliária</h4>
-                                <p class="text-gray-400 text-sm mb-6 font-light italic">Captura de leads através de
-                                    design imersivo e elegante.</p>
+                                <h4 class="text-2xl font-bold mb-2">MinhasFinanças</h4>
+                                <p class="text-gray-400 text-sm mb-6 font-light italic">Organize receitas, metas e
+                                    gastos com gráficos claros, sem servidor.</p>
                                 <button
                                     class="btn-detalhes w-full py-3 text-[10px] uppercase font-bold tracking-widest border border-blue-500/30 rounded-xl hover:bg-blue-500 transition-all">Ver
                                     Detalhes</button>
@@ -219,7 +221,7 @@
         </section>
 
         <!-- Seção de Skills/Stack: tecnologias e ferramentas, em cards no mesmo estilo de vidro dos outros blocos -->
-        <!-- Conteúdo genérico por enquanto - Stevan vai enviar os projetos reais pra gente ajustar essa lista depois -->
+        <!-- Conteúdo baseado nas tecnologias realmente usadas nos 3 projetos (SST, DP Master, MinhasFinanças) -->
         <section id="skills" class="py-32 px-6 animar-entrada">
             <div class="container mx-auto">
                 <div class="mb-24">
@@ -253,9 +255,10 @@
                         <h4 class="text-xl font-bold mb-5">Ferramentas</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="tag-skill">Git & GitHub</span>
-                            <span class="tag-skill">Figma</span>
-                            <span class="tag-skill">VS Code</span>
-                            <span class="tag-skill">NPM / Vite</span>
+                            <span class="tag-skill">Chart.js</span>
+                            <span class="tag-skill">SheetJS (Excel)</span>
+                            <span class="tag-skill">Vercel</span>
+                            <span class="tag-skill">Lucide Icons</span>
                         </div>
                     </div>
 
@@ -268,9 +271,9 @@
                         <h4 class="text-xl font-bold mb-5">Boas Práticas</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="tag-skill">Responsividade</span>
-                            <span class="tag-skill">Performance</span>
                             <span class="tag-skill">Acessibilidade</span>
-                            <span class="tag-skill">SEO Básico</span>
+                            <span class="tag-skill">SEO Técnico</span>
+                            <span class="tag-skill">Testes E2E (Playwright)</span>
                         </div>
                     </div>
                 </div>
@@ -388,7 +391,7 @@
                 <a id="modal-link-site" href="#" target="_blank"
                     class="flex-1 py-4 flex items-center justify-center gap-3 bg-indigo-600 rounded-2xl hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/30">
                     <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
-                    <span class="text-sm font-bold uppercase tracking-widest">Site Live</span>
+                    <span class="text-sm font-bold uppercase tracking-widest">Site</span>
                 </a>
             </div>
         </div>
